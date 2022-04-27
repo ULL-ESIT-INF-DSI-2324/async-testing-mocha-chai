@@ -11,7 +11,7 @@ import * as request from 'request';
  */
 export const weatherInfo = (location: string, callback: (
   err: string | undefined, data: request.Response | undefined) => void) => {
-  const url = `http://api.weatherstack.com/current?access_key=0a7b0390060e7ffc6c0f36c71bb96b6a&query=${encodeURIComponent(location)}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=aeb97bf5fbae1e796215bb0be875d548&query=${encodeURIComponent(location)}&units=m`;
 
   request({url: url, json: true}, (error, response) => {
     if (error) {
@@ -37,7 +37,7 @@ export const weatherInfo = (location: string, callback: (
  */
 export const coordinatesInfo = (location: string, callback:(
   err: string | undefined, data: request.Response | undefined) => void) => {
-  const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=pk.eyJ1IjoiZWR1c2VncmUiLCJhIjoiY2tvNDNjb3hmMWY4azJ1azQ3ZDlwaXozaCJ9.ycsJoGhxGtjZFrIzNt5LZA&limit=1`;
+  const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=pk.eyJ1IjoiZWR1c2VncmUiLCJhIjoiY2tubmdoMjE0MDA3ODJubndrNnBuenlteCJ9.dtIf0MrkO0Oe12ZM_I7pGw&limit=1`;
 
   request({url: url, json: true}, (error, response) => {
     if (error) {
