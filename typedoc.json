@@ -1,6 +1,7 @@
 {
   "entryPoints": [
-    "./src/asyncFunctions.ts"
+    "./src/asyncFunctionsCallbacks.ts",
+    "./src/asyncFunctionsPromises.ts"
   ],
   "out": "./docs"
 }
