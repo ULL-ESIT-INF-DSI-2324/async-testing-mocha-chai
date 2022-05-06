@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import {weatherInfo, coordinatesInfo} from '../src/asyncFunctions';
+import {weatherInfo, coordinatesInfo} from '../src/asyncFunctionsCallbacks';
 
 describe('Asynchronous function weatherInfo tests', () => {
   it('weatherInfo should get weather information', (done) => {
