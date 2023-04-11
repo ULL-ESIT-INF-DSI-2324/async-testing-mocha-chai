@@ -1,4 +1,4 @@
-import * as request from 'request';
+import request from 'request';
 
 /**
  * Obtains weather information from weatherstack API
@@ -7,10 +7,10 @@ import * as request from 'request';
  * @returns `Promise<request.Response>`
  */
 export function weatherInfoPromises(location: string) {
-  const url = `http://api.weatherstack.com/current?access_key=aeb97bf5fbae1e796215bb0be875d548&query=${encodeURIComponent(location)}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=3381d9569262229736266122fa11bdc1&query=${encodeURIComponent(location)}&units=m`;
   return new Promise<request.Response>((resolve, reject) => {
     request({url: url, json: true},
-        (error: any, response: request.Response) => {
+        (error: Error, response: request.Response) => {
           if (error) {
             reject(error.message);
           } else if (response.body.error) {

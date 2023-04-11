@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import {weatherInfoPromises} from '../src/asyncFunctionsPromises';
+import {weatherInfoPromises} from '../src/asyncFunctionsPromises.js';
 
 describe('Asynchronous function weatherInfoPromises tests (using async/await)', () => {
   it('weatherInfoPromises should get weather information', async () => {
