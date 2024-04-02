@@ -1,4 +1,4 @@
-import request from 'request';
+import request from "request";
 
 /**
  * Obtains weather information from weatherstack API
@@ -9,17 +9,26 @@ import request from 'request';
  * The second one is a request.Response object, which is provided if no error
  * arises.
  */
-export const weatherInfo = (location: string, callback: (
-  err: string | undefined, data: request.Response | undefined) => void) => {
+export const weatherInfo = (
+  location: string,
+  callback: (
+    err: string | undefined,
+    data: request.Response | undefined
+  ) => void
+) => {
   const url = `http://api.weatherstack.com/current?access_key=aeb97bf5fbae1e796215bb0be875d548&query=${encodeURIComponent(location)}&units=m`;
 
-  request({url: url, json: true}, (error: Error, response) => {
+  request({ url: url, json: true }, (error: Error, response) => {
     if (error) {
-      callback(`Weatherstack API is not available: ${error.message}`,
-          undefined);
+      callback(
+        `Weatherstack API is not available: ${error.message}`,
+        undefined
+      );
     } else if (response.body.error) {
-      callback(`Weatherstack API error: ${response.body.error.type}`,
-          undefined);
+      callback(
+        `Weatherstack API error: ${response.body.error.type}`,
+        undefined
+      );
     } else {
       callback(undefined, response);
     }
@@ -35,11 +44,16 @@ export const weatherInfo = (location: string, callback: (
  * The second one is a request.Response object, which is provided if no error
  * arises.
  */
-export const coordinatesInfo = (location: string, callback:(
-  err: string | undefined, data: request.Response | undefined) => void) => {
+export const coordinatesInfo = (
+  location: string,
+  callback: (
+    err: string | undefined,
+    data: request.Response | undefined
+  ) => void
+) => {
   const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=pk.eyJ1IjoiZWR1c2VncmUiLCJhIjoiY2xnYzF2aGh6MHQ1bDNjcWxidTU0eDgxYSJ9.st7ABXIpkSznXqIBQ4RnZs&limit=1`;
 
-  request({url: url, json: true}, (error: Error, response) => {
+  request({ url: url, json: true }, (error: Error, response) => {
     if (error) {
       callback(`Mapbox API is not available: ${error.message}`, undefined);
     } else if (response.body.features.length === 0) {

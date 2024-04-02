@@ -1,18 +1,18 @@
-import 'mocha';
-import {expect} from 'chai';
-import {weatherInfoPromises} from '../src/asyncFunctionsPromises.js';
+import "mocha";
+import { expect } from "chai";
+import { weatherInfoPromises } from "../src/asyncFunctionsPromises.js";
 
-describe('Asynchronous function weatherInfoPromises tests (using async/await)', () => {
-  it('weatherInfoPromises should get weather information', async () => {
-    const data = await weatherInfoPromises('Tenerife, Spain');
-    expect(data.body.location.name).to.be.equal('Tenerife');
+describe("Asynchronous function weatherInfoPromises tests (using async/await)", () => {
+  it("weatherInfoPromises should get weather information", async () => {
+    const data = await weatherInfoPromises("Tenerife, Spain");
+    expect(data.body.location.name).to.be.equal("Tenerife");
   });
 
-  it('weatherInfoPromises should provide an error', async () => {
+  it("weatherInfoPromises should provide an error", async () => {
     try {
-      await weatherInfoPromises('12wherever');
+      await weatherInfoPromises("12wherever");
     } catch (err) {
-      expect(err).to.be.equal('request_failed');
+      expect(err).to.be.equal("request_failed");
     }
   });
 });
