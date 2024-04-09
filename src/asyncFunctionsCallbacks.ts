@@ -16,7 +16,7 @@ export const weatherInfo = (
     data: request.Response | undefined
   ) => void
 ) => {
-  const url = `http://api.weatherstack.com/current?access_key=aeb97bf5fbae1e796215bb0be875d548&query=${encodeURIComponent(location)}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=f39a707f65a076a5a190d3adba14c5a8&query=${encodeURIComponent(location)}&units=m`;
 
   request({ url: url, json: true }, (error: Error, response) => {
     if (error) {
@@ -51,7 +51,7 @@ export const coordinatesInfo = (
     data: request.Response | undefined
   ) => void
 ) => {
-  const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=pk.eyJ1IjoiZWR1c2VncmUiLCJhIjoiY2xnYzF2aGh6MHQ1bDNjcWxidTU0eDgxYSJ9.st7ABXIpkSznXqIBQ4RnZs&limit=1`;
+  const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=pk.eyJ1IjoiZWR1c2VncmUiLCJhIjoiY2x1aTRzMDk4MDBxdTJqbXZ2cXJ4NDEwMyJ9.bwo9FmP8DTKKrR0_nZ-QWQ&limit=1`;
 
   request({ url: url, json: true }, (error: Error, response) => {
     if (error) {

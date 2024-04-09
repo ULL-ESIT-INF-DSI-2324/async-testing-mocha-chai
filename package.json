@@ -16,10 +16,10 @@
   "devDependencies": {
     "@types/chai": "^4.3.14",
     "@types/mocha": "^10.0.6",
-    "@types/node": "^20.12.2",
+    "@types/node": "^20.12.6",
     "@types/request": "^2.48.12",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "c8": "^9.1.0",
     "chai": "^5.1.0",
     "eslint": "^8.57.0",
@@ -28,8 +28,8 @@
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "tsc-watch": "^6.2.0",
-    "typedoc": "^0.25.12",
-    "typescript": "^5.4.3"
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.4"
   },
   "dependencies": {
     "request": "^2.88.2"

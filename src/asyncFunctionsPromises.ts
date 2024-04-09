@@ -7,7 +7,7 @@ import request from "request";
  * @returns `Promise<request.Response>`
  */
 export function weatherInfoPromises(location: string) {
-  const url = `http://api.weatherstack.com/current?access_key=aeb97bf5fbae1e796215bb0be875d548&query=${encodeURIComponent(location)}&units=m`;
+  const url = `http://api.weatherstack.com/current?access_key=f39a707f65a076a5a190d3adba14c5a8&query=${encodeURIComponent(location)}&units=m`;
   return new Promise<request.Response>((resolve, reject) => {
     request(
       { url: url, json: true },
